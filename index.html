@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetiana Savaryn</title>
+    
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/cube.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#header').load('../layout/header.html');
+            $('#footer').load('../layout/footer.html');
+        })
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Intro --> 
+    <section id="home">
+        
+        <div class="row" id="intro">
+            <h1 id="hello">Hello</h1>
+            <h2>I'm <strong>Tetiana Savaryn</strong>, a&nbsp;Web Developer & UI/UX Designer based in Canada</h2>
+        </div>
+        <div id="parallax"></div>
+    </section>
+
+    <!-- Work --> 
+    <section id="work">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md imgwrap">
+                    <a href = "#">
+                        <div class="desaturate" style="background-image: url(img/gallery/stsophie.jpg)">
+                            <div class="darker"></div>
+                        </div>
+                        <div class="caption">
+                            <h3>Saint Sophie</h3>
+                            <p>branding / ui / web</p>
+                        </div>
+                    </a> 
+                </div>
+
+                <div class="col-md imgwrap">
+                    <a href = "#">
+                        <div class="desaturate" style="background-image: url(img/gallery/mac.jpg)">
+                            <div class="darker"></div>
+                        </div>
+                        <div class="caption">
+                            <h3>MAC</h3>
+                            <p>ui / web</p>
+                        </div>
+                    </a> 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md imgwrap">
+                    <a href = "#">
+                        <div class="desaturate" style="background-image: url(img/gallery/vicdi.jpg)">
+                            <div class="darker"></div>
+                        </div>
+                        <div class="caption">
+                            <h3>VicDi</h3>
+                            <p>branding / ui / web</p>
+                        </div>
+                    </a> 
+                </div>
+
+                <div class="col-md imgwrap">
+                    <a href = "#">
+                        <div class="desaturate" style="background-image: url(img/gallery/crystal_healing.jpg)">
+                            <div class="darker"></div>
+                        </div>
+                        <div class="caption">
+                            <h3>Crystal Healing</h3>
+                            <p>branding / ui / web</p>
+                        </div>
+                    </a> 
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+</body>
+</html>
+
+<script>
+    var hello = document.getElementById("hello");
+    var change = ['Hello', 'Bonjour', 'Привіт', '&#128075'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (change.length > i) {
+                setTimeout(function() {
+                    document.getElementById("hello").innerHTML = change[i];
+                    textSequence(++i);
+                }, 800); // 1 second (in milliseconds)
+
+            } else if (change.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+</script>
+
+<script>
+    (function() {
+    // Add event listener
+    document.addEventListener("mousemove", parallax);
+    const elem = document.querySelector("#parallax");
+    // Magic happens here
+    function parallax(e) {
+        let _w = window.innerWidth/2;
+        let _h = window.innerHeight/2;
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+        let _depth1 = `${50 - (_mouseX - _w) * 0.03}% ${100 - (_mouseY - _h) * 0.18}%`;
+        let _depth2 = `${50 - (_mouseX - _w) * 0.1}% ${100 - (_mouseY - _h) * 0.1}%`;
+        let _depth3 = `${50 - (_mouseX - _w) * 0.01}% ${100}%`;
+        let x = `${_depth1}, ${_depth2}, ${_depth3}`;
+        console.log(x);
+        elem.style.backgroundPosition = x;
+    }
+
+})();
+</script>
