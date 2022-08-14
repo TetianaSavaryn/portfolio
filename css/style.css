@@ -81,6 +81,8 @@ html, body {
 
 #intro {
   padding: 10%;
+  background-position: center;
+  background-size: cover;
 }
 
 #parallax {
@@ -94,7 +96,7 @@ html, body {
 #work {
   background-color: #494949;
   padding: 120px 0;
-  margin-top: -1px;
+  margin-top: -20px;
 }
 
 .imgwrap {
@@ -184,6 +186,27 @@ html, body {
   cursor: pointer !important;
 }
 
+/* work */
+#footer {
+  background-color: #B1F20F;
+  color: #494949;
+  font-family: 'Lato', sans-serif;
+}
+
+#footer i {
+  color: #494949;
+  outline: 4px solid #fbfaf691;
+  background-color: #fbfaf691;
+  border-radius: 2px;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #494949;
+}
+.text-muted {
+  font-size: 0.8em;
+}
 
 
 /* ============ desktop view .end// ============ */
