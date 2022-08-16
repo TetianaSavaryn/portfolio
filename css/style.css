@@ -289,12 +289,17 @@ html, body {
 }
 
 .mob_preview img {
-  height: 500px;
+  height: 550px;
 }
 
 .project p {
   font-weight: 300;
   font-size: 1em;
+}
+
+.project_preview img {
+  margin: 30px 10%;
+  width: 80%;
 }
 
 /* ============ desktop view .end// ============ */
@@ -315,6 +320,40 @@ html, body {
     text-align: center;
   }
 
+  .justify-content-between {
+    margin: 0;
+  }
+
+  .tasks, .technologies, .tools {
+    padding: 0 20% 5%;
+  }
+  
+  .project .btn {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+  }
+
+  .gif_preview {
+    padding-top: 5%;
+  }
+
+  .mob_preview img {
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+  }
+  
+  .project_preview {
+    background-color: aqua;
+    padding: 0px;
+  }
+
+  .project_preview img {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
 
 }
 /* ============ mobile view .end// ============ */
