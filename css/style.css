@@ -290,6 +290,7 @@ html, body {
 
 .mob_preview img {
   height: 550px;
+  padding-bottom: 30px;
 }
 
 .project p {
@@ -297,8 +298,13 @@ html, body {
   font-size: 1em;
 }
 
+.project_preview_gif img{
+  width: 70%;
+  padding: 5px 15%;
+}
+
 .project_preview img {
-  margin: 30px 10%;
+  margin: 0 10%;
   width: 80%;
 }
 
@@ -341,11 +347,10 @@ html, body {
   .mob_preview img {
     width: 100%;
     height: auto;
-    padding: 5px 0;
+    padding: 5px 0 30px;
   }
   
   .project_preview {
-    background-color: aqua;
     padding: 0px;
   }
 
@@ -353,6 +358,7 @@ html, body {
     width: 100%;
     padding: 0px;
     margin: 0px;
+    padding-bottom: 30px;
   }
 
 }
