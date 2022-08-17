@@ -308,6 +308,15 @@ html, body {
   width: 80%;
 }
 
+#management_system .technologies .tworow,
+#teacher_portal .technologies .tworow {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+}
+
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view .start// ============ */
