@@ -17,6 +17,10 @@ html, body {
   transition: 0.5s; /* For modern browsers */
 }
 
+.navbar-brand {
+  fill:#494949;
+}
+
 .navbar-brand:hover {
   fill:#abdf0d;
 }
@@ -293,7 +297,8 @@ html, body {
   padding-bottom: 30px;
 }
 
-.project p {
+.project p,
+.project li {
   font-weight: 300;
   font-size: 1em;
 }
@@ -311,6 +316,7 @@ html, body {
 #management_system .technologies .tworow,
 #teacher_portal .technologies .tworow {
   columns: 2;
+  column-gap: 10px;
   -webkit-columns: 2;
   -moz-columns: 2;
   -moz-column-gap: 10px;
@@ -333,6 +339,13 @@ html, body {
     width: 100%;
     height: 35px;
     text-align: center;
+  }
+
+  .project:hover h2::after,
+  .project:active h2::after {
+    width: 100%;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
   }
 
   .justify-content-between {
