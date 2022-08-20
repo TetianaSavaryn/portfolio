@@ -234,7 +234,7 @@ html, body {
   letter-spacing: 1px;
   word-spacing: 2px;
 }
-
+#aboutme::after,
 .project h2::after {
   padding-top: 35px;
   border-bottom: 3px solid #abdf0d;
@@ -246,6 +246,7 @@ html, body {
   transition: 1s ease-in-out;
 }
 
+#about:hover #aboutme::after,
 .project:hover h2::after {
   width: 100%;
   -webkit-transition: 1s ease-in-out;
@@ -262,7 +263,7 @@ html, body {
 .project .about_project p {
   font-weight: 300;
   font-size: 1.2em;
-  line-height: 0.9;
+  line-height: 1.2;
   font-size: 0.9em;
 }
 
@@ -293,7 +294,7 @@ html, body {
 }
 
 .mob_preview img {
-  height: 550px;
+  width: 96%;
   padding-bottom: 30px;
 }
 
@@ -323,11 +324,38 @@ html, body {
   -webkit-column-gap: 10px;
 }
 
+#about h1 {
+  font-size: 2em;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+#photo {
+  width: 350px;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+
+#about .skills {
+  padding-top: 30px;
+}
+#about .skills p {
+  font-size: 1.2em;
+  line-height: 0.9;
+  font-size: 0.9em;
+}
+
+.skills .btn {
+  margin-right: 40px;
+}
+
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view .start// ============ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
   /* footer */
   #footer .text-muted {
@@ -365,11 +393,11 @@ html, body {
   .gif_preview {
     padding-top: 5%;
   }
-
+  
   .mob_preview img {
     width: 100%;
-    height: auto;
-    padding: 5px 0 30px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
   }
   
   .project_preview {
@@ -383,5 +411,20 @@ html, body {
     padding-bottom: 30px;
   }
 
+  #aboutme {
+    margin: 0;
+  }
+  
+  #photo {
+    height: 400px;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  .skills .btn {
+    margin-right: 0;
+    margin-top: 30px;
+  }
 }
 /* ============ mobile view .end// ============ */
