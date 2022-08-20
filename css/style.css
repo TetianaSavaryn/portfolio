@@ -324,6 +324,37 @@ html, body {
   -webkit-column-gap: 10px;
 }
 
+.goback {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.goback a {
+  color: #494949;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 280ms ease-in-out;
+}
+
+.goback a:hover{
+  letter-spacing: .7px;
+}
+
+.goback a:after {
+  border-bottom: 3px solid #abdf0d;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.goback a:hover:after {
+  width: 8%;
+}
+
+/*about*/
 #about h1 {
   font-size: 2em;
   text-align: left;
@@ -351,6 +382,11 @@ html, body {
   margin-right: 40px;
 }
 
+/*archive*/
+#archive {
+  background-color: #fbfaf6;
+  padding: 120px 0;
+}
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view .start// ============ */

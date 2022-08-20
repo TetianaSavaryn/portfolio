@@ -52,13 +52,13 @@
       <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/index.html#work">Work</a>
+            <a class="nav-link active" aria-current="page" href="/index.html">Work</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Archive</a>
+            <a class="nav-link" href="/archive.html">Archive</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
@@ -67,3 +67,10 @@
       </div>
     </div>
 </nav>
+
+<script>
+  $(document).ready(function() {
+  $('a.nav-link').removeClass('active').removeAttr('aria-current');
+  $('a[href="' + location.pathname + '"]').closest('a').addClass('active').attr('aria-current', 'page'); 
+});
+</script>
