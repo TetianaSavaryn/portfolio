@@ -387,6 +387,29 @@ html, body {
   background-color: #fbfaf6;
   padding: 120px 0;
 }
+
+/*contact*/
+#contact_form {
+  margin: 0;
+}
+
+#contact_form h1 {
+  margin: 50px 0;
+}
+
+#contact_form button {
+  margin: 50px 35%;
+  width: 30%;
+}
+
+.form-control {
+  margin-bottom: 30px;
+}
+
+.form-control:focus{
+  border: #abdf0d;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(171, 223, 13, 0.489);;
+}
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view .start// ============ */
@@ -461,6 +484,11 @@ html, body {
   .skills .btn {
     margin-right: 0;
     margin-top: 30px;
+  }
+
+  #contact_form button {
+    margin: 50px 0;
+    width: 100%;
   }
 }
 /* ============ mobile view .end// ============ */
