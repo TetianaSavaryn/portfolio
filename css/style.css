@@ -217,6 +217,10 @@ html, body {
   text-align: left;
 }
 
+.link {
+  color: #494949;
+}
+
 .project h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
