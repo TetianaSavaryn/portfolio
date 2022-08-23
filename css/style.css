@@ -228,68 +228,14 @@ html, body {
 .project h2 {
   font-weight: 400;
   font-size: 1.1em;
-  padding-bottom: 35px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
   word-spacing: 2px;
 }
-#aboutme::after,
-.project h2::after {
-  padding-top: 35px;
-  border-bottom: 3px solid #abdf0d;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  width: 50%;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-}
-
-#about:hover #aboutme::after,
-.project:hover h2::after {
-  width: 100%;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-}
-
-.project h3 {
-  font-weight: 600;
-  font-size: 1em;
-  line-height: 1.6;
-  padding-bottom: 5px;
-}
-
-.project .about_project p {
-  font-weight: 300;
-  font-size: 1.2em;
-  line-height: 1.2;
-  font-size: 0.9em;
-}
-
-.project .btn {
-  width: 180px;
-  float: right;
-  border-radius: 0%;
-  border: none;
-  color: #494949;
-  background-color: #abdf0d;
-  border: 3px solid #abdf0d;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'Lato', sans-serif;
-  transition: all 200ms ease-in-out;
-}
-
-.project .btn:hover {
-  border: 3px solid #abdf0d;
-  background-color: #fff;
-  letter-spacing: 2px;
-}
 
 .gif_preview img {
-  padding: 3% 0 10%;
+  padding: 3% 0;
   width: 100%;
 }
 
@@ -312,6 +258,68 @@ html, body {
 .project_preview img {
   margin: 0 10%;
   width: 80%;
+}
+
+#aboutme::after,
+.description::after {
+  padding-bottom: 35px;
+  border-bottom: 3px solid #abdf0d;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#about:hover #aboutme::after,
+.project:hover .description::after {
+  width: 100%;
+  -webkit-transition: 4s ease-in-out;
+  transition: 4s ease-in-out;
+}
+
+.description {
+  padding-bottom: 35px;
+}
+
+.description img {
+  width: 100%;
+}
+
+.project h3 {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.6;
+  padding-bottom: 5px;
+}
+
+.project .about_project p {
+  font-weight: 300;
+  font-size: 1.2em;
+  line-height: 1.2;
+  font-size: 0.9em;
+}
+
+.project .btn {
+  width: 180px;
+  float: right;
+  border-radius: 0%;
+  border: 3px solid #abdf0d;
+  background-color: #fff;
+  color: #494949;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  transition: all 200ms ease-in-out;
+}
+
+.project .btn:hover {
+  letter-spacing: 2px;
+  color: #494949;
+  background-color: #abdf0d;
+  border: 3px solid #abdf0d;
 }
 
 #management_system .technologies .tworow,
@@ -369,11 +377,11 @@ html, body {
   padding: 0;
 }
 
-#aboutme .skills {
+#about .skills {
   padding-top: 30px;
 }
 
-#aboutme .skills p {
+#about .skills p {
   font-size: 1.2em;
   line-height: 0.9;
   font-size: 0.9em;
@@ -429,8 +437,13 @@ html, body {
     text-align: center;
   }
 
-  .project:hover h2::after,
-  .project:active h2::after {
+ .description::after {
+    width: 80%;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+  }
+
+  .project:hover .description::after {
     width: 100%;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
@@ -475,9 +488,8 @@ html, body {
     margin: 0;
   }
 
-  #aboutme .skills{
+  #about .skills{
     padding: 30px;
-    position:sticky;
   }
   
   #photo {
